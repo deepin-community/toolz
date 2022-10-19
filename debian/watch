@@ -1,0 +1,4 @@
+# please also check https://pypi.debian.net/toolz/watch
+version=3
+opts="filenamemangle=s/(?:.*)?v?(\d[\d\.]*)\.tar\.gz/toolz-$1.tar.gz/" \
+  https://github.com/pytoolz/toolz/tags (?:.*/)?v?(\d[\d\.]*)\.tar\.gz

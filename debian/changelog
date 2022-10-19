@@ -1,0 +1,76 @@
+toolz (0.11.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Diane Trout ]
+  * New upstream release.
+  * Depend on python3-docutils, not python-docutils. Thanks dose.
+  * Update Standards-Version to 4.5.1. No changes needed
+
+ -- Diane Trout <diane@ghic.org>  Thu, 19 Aug 2021 10:07:33 -0700
+
+toolz (0.9.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/watch: Use https protocol
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+  * d/control: Remove ancient X-Python3-Version field
+
+  [ Diane Trout ]
+  * New upstream release.
+  * Remove dont-reference-toolz-curried-exceptions, applied upstream
+  * Update Standards-Version to 4.1.4, no changes needed
+  * Remove unnecessary Testsuite: attribute
+  * Update X-Python3-Version to a less ancient version
+  * Use Python 3 version of sphinx
+  * Update to debhelper 11
+  * Use https for homepage
+
+ -- Diane Trout <diane@ghic.org>  Tue, 15 May 2018 22:32:38 -0700
+
+toolz (0.8.2-3) unstable; urgency=medium
+
+  * Add python3-all dependency to tests/control to make sure
+    we test against all available versions of Python 3.
+    Thanks: Steve Langasek (Closes: #867534)
+
+ -- Diane Trout <diane@ghic.org>  Fri, 07 Jul 2017 11:37:43 -0700
+
+toolz (0.8.2-2) unstable; urgency=medium
+
+  * Add dont-reference-toolz-curried-exceptions.patch (Closes: #867242)
+
+ -- Diane Trout <diane@ghic.org>  Wed, 05 Jul 2017 10:32:00 -0700
+
+toolz (0.8.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Run installed tests
+  * Skip test_curried_exceptions in build tests which depends on a doctest
+    See https://github.com/pytoolz/toolz/issues/357
+  * Delete .cache directory, created by py.test
+
+
+ -- Diane Trout <diane@ghic.org>  Wed, 21 Dec 2016 11:13:08 -0800
+
+toolz (0.8.1-1) unstable; urgency=medium
+
+  * Mark doc package as Multi-Arch: foreign
+  * Import new upstream version.
+
+ -- Diane Trout <diane@ghic.org>  Thu, 08 Dec 2016 13:34:11 -0800
+
+toolz (0.8.0-1) unstable; urgency=low
+
+  * Initial packaging (Closes: #817779)
+    This incorporates work by Stefan van der Walt. Thank you.
+
+ -- Diane Trout <diane@ghic.org>  Fri, 02 Dec 2016 15:22:45 -0800

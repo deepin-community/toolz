@@ -1,0 +1,8 @@
+This package is following the standard Debian, Python Library style
+guide, with the git-dpm configuration.
+
+The github url is used instead of pypi in the debian/watch file
+because upstream removed the documentation source from the pypi
+release.
+
+ -- Diane Trout <diane@ghic.org>, Fri,  2 Dec 2016 21:58:16 -0800
