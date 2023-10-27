@@ -1,3 +1,31 @@
+toolz (0.12.0-1) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Team upload.
+  * New upstream release.
+    - Supports Python 3.11 (Closes: #1022030)
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + Build-Depends: Drop versioned constraint on python3-sphinx.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 19 Oct 2022 19:12:31 +0200
+
+toolz (0.11.2-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 13.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Contact, Repository,
+    Repository-Browse.
+  * Set field Upstream-Contact in debian/copyright.
+  * Remove obsolete field Contact from debian/upstream/metadata (already present
+    in machine-readable debian/copyright).
+
+  [ Diane Trout ]
+  * New upstream release for Python 3.10 compatibility (Closes: #1001488)
+
+ -- Diane Trout <diane@ghic.org>  Sat, 11 Dec 2021 13:52:25 -0800
+
 toolz (0.11.1-1) unstable; urgency=medium
 
   [ Ondřej Nový ]

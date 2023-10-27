@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: toolz
 Source: https://github.com/pytoolz/toolz
+Upstream-Contact: Erik Welch <erik.n.welch@gmail.com>
 
 Files: *
 Copyright: 2013 Matthew Rocklin <mrocklin@gmail.com>

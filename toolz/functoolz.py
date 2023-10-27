@@ -3,10 +3,11 @@ import inspect
 import sys
 from operator import attrgetter, not_
 from importlib import import_module
-from textwrap import dedent
 from types import MethodType
 
 from .utils import no_default
+
+PYPY = hasattr(sys, 'pypy_version_info') and sys.version_info[0] > 2
 
 
 __all__ = ('identity', 'apply', 'thread_first', 'thread_last', 'memoize',
@@ -777,6 +778,8 @@ class excepts(object):
 
     @instanceproperty(classval=__doc__)
     def __doc__(self):
+        from textwrap import dedent
+
         exc = self.exc
         try:
             if isinstance(exc, tuple):
