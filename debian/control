@@ -3,10 +3,10 @@ Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders: Diane Trout <diane@ghic.org>
 Section: python
 Priority: optional
-Build-Depends: debhelper-compat (= 11),
+Build-Depends: debhelper-compat (= 13),
                dh-python,
                python3-docutils,
-               python3-sphinx (>= 1.0.7+dfsg-1~),
+               python3-sphinx,
                python3-all,
                python3-pytest,
                python3-setuptools

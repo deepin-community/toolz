@@ -23,9 +23,9 @@ def get_keywords():
     # setup.py/versioneer.py will grep for the variable names, so they must
     # each be defined on a line of their own. _version.py will just call
     # get_keywords().
-    git_refnames = " (tag: 0.11.1)"
-    git_full = "e9bc1e150b7b1ea1bec300a55382ed564b215f41"
-    git_date = "2020-09-24 10:39:55 -0500"
+    git_refnames = " (tag: 0.12.0)"
+    git_full = "245b78e6320c41a4a9cdd15c6123681fbfb62843"
+    git_date = "2022-07-09 23:15:45 -0500"
     keywords = {"refnames": git_refnames, "full": git_full, "date": git_date}
     return keywords
 
@@ -268,7 +268,7 @@ def git_pieces_from_vcs(tag_prefix, root, verbose, run_command=run_command):
         # TAG-NUM-gHEX
         mo = re.search(r'^(.+)-(\d+)-g([0-9a-f]+)$', git_describe)
         if not mo:
-            # unparseable. Maybe git-describe is misbehaving?
+            # unparsable. Maybe git-describe is misbehaving?
             pieces["error"] = ("unable to parse git-describe output: '%s'"
                                % describe_out)
             return pieces
