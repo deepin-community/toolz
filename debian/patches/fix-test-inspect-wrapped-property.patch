@@ -1,0 +1,26 @@
+From: Colin Watson <cjwatson@debian.org>
+Date: Wed, 24 Apr 2024 17:52:24 +0100
+Subject: Fix test failure on Python 3.11.9/3.12.3/main
+
+Fixes #577.
+
+Bug-Debian: https://bugs.debian.org/1069818
+Forwarded: https://github.com/pytoolz/toolz/pull/578
+---
+ toolz/tests/test_inspect_args.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/toolz/tests/test_inspect_args.py b/toolz/tests/test_inspect_args.py
+index 93408eb..95dea6b 100644
+--- a/toolz/tests/test_inspect_args.py
++++ b/toolz/tests/test_inspect_args.py
+@@ -482,6 +482,8 @@ def test_inspect_wrapped_property():
+     wrapped = Wrapped(func)
+     assert inspect.signature(func) == inspect.signature(wrapped)
+ 
+-    assert num_required_args(Wrapped) is None
++    # Python 3.11.9/3.12.3/3.13.0 added inspect.signature support for custom
++    # callables; before then, this returned None.
++    assert num_required_args(Wrapped) in (None, 1)
+     _sigs.signatures[Wrapped] = (_sigs.expand_sig((0, lambda func: None)),)
+     assert num_required_args(Wrapped) == 1

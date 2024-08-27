@@ -1,3 +1,22 @@
+toolz (0.12.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release:
+    - Minimal maintenance to support Python 3.12.
+  * Fix test failure on Python 3.11.9/3.12.3/main (closes: #1069818).
+
+ -- Colin Watson <cjwatson@debian.org>  Fri, 26 Apr 2024 12:47:29 +0100
+
+toolz (0.12.0-2) unstable; urgency=medium
+
+  * Team Upload.
+  * Fixup with cme. S-V to 4.6.2
+  * Add "Rules-Requires-Root: no"
+  * Bump watch file version to 4
+  * Update copyright year
+
+ -- Nilesh Patra <nilesh@debian.org>  Mon, 01 Jan 2024 10:19:24 +0530
+
 toolz (0.12.0-1) unstable; urgency=medium
 
   [ Stefano Rivera ]
